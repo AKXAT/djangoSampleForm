@@ -1,4 +1,34 @@
 from django import forms
+from basicapp.models import Projects
+
+class NewUser(forms.ModelForm):
+    class Meta():
+        model = Projects
+        fields = ' __all__'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''from django import forms
 from django.forms.widgets import HiddenInput
 from django.core import validators
 
@@ -18,11 +48,11 @@ class FormName(forms.Form):
         if email != vmail:
             raise forms.ValidationError('Make sure the email is correct')
         
-    
-'''    
+
     
     def clean_botcatcher(self):
         botcatcher = self.cleaned_data['botcatcher']
         if len(botcatcher) > 0 :
             raise forms.ValidationError('GOTCHA BOT')
-        return botcatcher'''
+        return botcatcher
+'''
